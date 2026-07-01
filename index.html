@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏奖励补发计算器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎁 游戏奖励补发计算器</h1>
+            <p class="subtitle">情缘连冲 / 天天连冲</p>
+        </header>
+
+        <div class="form-section">
+            <div class="form-group">
+                <label>选择奖励类型：</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="giftType" value="love" checked>
+                        <span>💕 情缘连冲</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="giftType" value="daily">
+                        <span>🌟 天天连冲</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>输入玩家已充值天数：</label>
+                <div class="input-group">
+                    <input type="number" id="chargeDay" min="0" max="27" placeholder="0-27">
+                    <span class="input-unit">天</span>
+                </div>
+                <span class="hint">充值天数范围：0-27天</span>
+            </div>
+
+            <button id="calculateBtn" class="calculate-btn">计算补发奖励</button>
+        </div>
+
+        <div class="result-section" id="resultSection">
+            <h2>📋 补发奖励结果</h2>
+            <div id="resultContent" class="result-content"></div>
+            <div id="breakdown" class="breakdown"></div>
+        </div>
+
+        <div class="info-section">
+            <h2>📖 奖励物品说明</h2>
+            <div class="info-tabs">
+                <button class="tab-btn active" data-tab="love">情缘连冲</button>
+                <button class="tab-btn" data-tab="daily">天天连冲</button>
+            </div>
+            <div class="tab-content" id="loveTab">
+                <div class="gift-card">
+                    <span class="gift-icon">💰</span>
+                    <span class="gift-name">绑元</span>
+                    <span class="gift-desc">基础货币，可购买各类道具</span>
+                </div>
+                <div class="gift-card">
+                    <span class="gift-icon">💎</span>
+                    <span class="gift-name">三生石</span>
+                    <span class="gift-desc">情缘系统专用道具</span>
+                </div>
+                <div class="gift-card">
+                    <span class="gift-icon">💖</span>
+                    <span class="gift-name">爱的结晶</span>
+                    <span class="gift-desc">稀有情缘道具</span>
+                </div>
+                <div class="gift-card">
+                    <span class="gift-icon">👑</span>
+                    <span class="gift-name">贵重道具</span>
+                    <span class="gift-desc">特殊奖励物品</span>
+                </div>
+            </div>
+            <div class="tab-content hidden" id="dailyTab">
+                <div class="gift-card">
+                    <span class="gift-icon">⚔️</span>
+                    <span class="gift-name">宝具精魄</span>
+                    <span class="gift-desc">装备强化材料</span>
+                </div>
+                <div class="gift-card">
+                    <span class="gift-icon">👟</span>
+                    <span class="gift-name">足迹升级丹</span>
+                    <span class="gift-desc">足迹系统升级道具</span>
+                </div>
+                <div class="gift-card">
+                    <span class="gift-icon">🐴</span>
+                    <span class="gift-name">坐骑升级丹</span>
+                    <span class="gift-desc">坐骑系统升级道具</span>
+                </div>
+                <div class="gift-card">
+                    <span class="gift-icon">✨</span>
+                    <span class="gift-name">星辉装备箱</span>
+                    <span class="gift-desc">高品质装备宝箱</span>
+                </div>
+                <div class="gift-card">
+                    <span class="gift-icon">👑</span>
+                    <span class="gift-name">贵重道具</span>
+                    <span class="gift-desc">特殊奖励物品</span>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>游戏奖励补发计算工具 © 2024</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
