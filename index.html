@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏奖励补发计算器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>游戏奖励补发计算器</h1>
+        
+        <div class="form-group">
+            <label>选择奖励类型：</label>
+            <div class="radio-group">
+                <label class="radio-label">
+                    <input type="radio" name="giftType" value="love" checked>
+                    <span>情缘连冲</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="giftType" value="daily">
+                    <span>天天连冲</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>输入玩家已充值天数：</label>
+            <input type="number" id="chargeDay" min="0" max="27" placeholder="请输入0-27之间的数字">
+            <span class="hint">（充值天数范围：0-27天）</span>
+        </div>
+
+        <button id="calculateBtn">计算补发奖励</button>
+
+        <div class="result" id="result">
+            <h3>补发奖励结果：</h3>
+            <div id="resultContent"></div>
+        </div>
+
+        <div class="gift-box-info">
+            <h3>奖励物品说明：</h3>
+            <div class="info-tabs">
+                <button class="tab-btn active" data-tab="love">情缘连冲奖励</button>
+                <button class="tab-btn" data-tab="daily">天天连冲奖励</button>
+            </div>
+            <div class="tab-content" id="loveTab">
+                <ul>
+                    <li>绑元 - 基础货币</li>
+                    <li>三生石 - 情缘道具</li>
+                    <li>爱的结晶 - 稀有情缘道具</li>
+                    <li>贵重道具 - 特殊奖励</li>
+                </ul>
+            </div>
+            <div class="tab-content hidden" id="dailyTab">
+                <ul>
+                    <li>宝具精魄 - 装备材料</li>
+                    <li>足迹升级丹 - 足迹升级道具</li>
+                    <li>坐骑升级丹 - 坐骑升级道具</li>
+                    <li>星辉装备箱 - 装备宝箱</li>
+                    <li>贵重道具 - 特殊奖励</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
