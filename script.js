@@ -19,16 +19,16 @@ const GiftManager = {
     // 情缘连冲奖励箱
     loveGiftBox: [
         new Gift("绑元", 1),
-        new Gift("三生石", 30),
-        new Gift("爱的结晶", 30),
+        new Gift("三生石", 15),
+        new Gift("爱的结晶", 15),
         new Gift("贵重道具", 1)
     ],
     
     // 天天连冲奖励箱
     dailyGiftBox: [
         new Gift("宝具精魄", 1),
-        new Gift("足迹升级丹", 30),
-        new Gift("坐骑升级丹", 30),
+        new Gift("足迹升级丹", 15),
+        new Gift("坐骑升级丹", 15),
         new Gift("星辉装备箱", 1),
         new Gift("贵重道具", 1)
     ]
